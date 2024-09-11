@@ -1,0 +1,151 @@
+/* 设置 HTML 和 body 高度为 100%，确保背景覆盖整个页面 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* 背景元素样式，覆盖整个页面 */
+#bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  transition: background 1s;
+}
+
+/* 背景图片淡入效果 */
+@keyframes bg-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 背景图片淡出效果 */
+@keyframes bg-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* 图片信息链接的样式 */
+#bg-info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 展示输入框按钮的样式 */
+#show-input {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+  padding: 10px 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+#show-input:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 输入框容器样式 */
+#input-container {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+/* 更换背景按钮的样式 */
+#change {
+  margin-top: 10px;
+  padding: 10px 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+#change:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 下载按钮样式 */
+#download-btn {
+  position: absolute;
+  bottom: 70px;
+  left: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 暂停按钮样式 */
+#toggle-update {
+  position: absolute;
+  bottom: 130px;
+  left: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: none;
+  outline: none;
+  text-decoration: none; /* 去除下划线 */
+  transition: background-color 0.3s ease;
+}
+
+#toggle-update:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 个人主页链接样式 */
+#site-link {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#site-link:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
