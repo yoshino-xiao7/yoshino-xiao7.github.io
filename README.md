@@ -1,4 +1,4 @@
-# yoshino-xiao7.github.io
+# [yuzusoft.life](https://yuzusoft.life)
 小夏春美的图片下载站，网站持续更新中~
 
 ## 更新日志
