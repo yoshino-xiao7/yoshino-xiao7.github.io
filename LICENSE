@@ -1,28 +1,77 @@
-BSD 3-Clause License
-
+小夏春美的许可证 / 小夏春美のライセンス / Harumi Yoshino's License
+版权所有 (c) 2024, yoshino-xiao7
+著作権 (c) 2024, yoshino-xiao7
 Copyright (c) 2024, yoshino-xiao7
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+1. 许可使用 / 使用許可 / License Use
+中文：
+源代码和二进制形式的再分发和使用，无论是否经过修改，均允许，前提是符合以下条件：
 
-1. Redistributions of source code must retain the above copyright notice, this
-   list of conditions and the following disclaimer.
+日本語：
+ソースコードおよびバイナリ形式での再配布および使用は、変更の有無にかかわらず、以下の条件を満たす場合に許可されます：
 
-2. Redistributions in binary form must reproduce the above copyright notice,
-   this list of conditions and the following disclaimer in the documentation
-   and/or other materials provided with the distribution.
+English:
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
-3. Neither the name of the copyright holder nor the names of its
-   contributors may be used to endorse or promote products derived from
-   this software without specific prior written permission.
+2. 条件 / 条件 / Conditions
+源代码再分发 必须保留上述版权声明、本条款列表以及以下免责声明。
+ソースコードの再配布 には、上記の著作権表示、この条件リスト、および以下の免責事項を保持する必要があります。
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+二进制形式再分发 必须在分发所附带的文档和/或其他材料中复制上述版权声明、本条款列表以及以下免责声明。
+バイナリ形式での再配布 には、配布されるドキュメントおよび/または他の資料に、上記の著作権表示、この条件リスト、および以下の免責事項を含める必要があります。
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+未经特定书面许可，版权所有者或其贡献者的姓名不得 用于任何形式的产品背书或推广。
+特定の事前の書面許可なしに、著作権者またはその貢献者の名前 を使用して、このソフトウェアに由来する製品を支持または宣伝することはできません。
+Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+3. 归属与贡献者条款 / 帰属および貢献者に関する条項 / Attribution and Contributor Terms
+中文：
+归属声明：在任何公开的再分发中，必须在可见的位置标注 "版权所有 (c) 2024, yoshino-xiao7"，并附带项目存储库的链接。
+贡献者条款：贡献的代码或文档默认根据此许可证进行授权，贡献者无权要求额外权利。
+日本語：
+帰属声明：公に再配布される場合、見える位置に "著作権 (c) 2024, yoshino-xiao7" と表示し、プロジェクトリポジトリへのリンクを提供する必要があります。
+貢献者条項：貢献されたコードやドキュメントは、このライセンスに従って自動的に許可され、貢献者は追加の権利を要求することはできません。
+English:
+Attribution: Any public redistribution must clearly display "Copyright (c) 2024, yoshino-xiao7" in a visible location, along with a link to the project repository.
+Contributor Terms: Contributions of code or documentation are licensed under this license by default, and contributors cannot claim additional rights.
+4. 商业使用条款 / 商用利用条項 / Commercial Use Terms
+中文：
+允许商业用途，但必须在文档中注明软件的来源。商业用户建议与原作者联系，以探讨合作或授权条款。
+
+日本語：
+商業利用は許可されていますが、ドキュメントにソフトウェアの出所を明記する必要があります。商業ユーザーは、原著者と協力やライセンスについて相談することをお勧めします。
+
+English:
+Commercial use is permitted, but the source of the software must be credited in the documentation. Commercial users are encouraged (but not required) to contact the original author for collaboration or licensing discussions.
+
+5. 禁止使用 / 禁止される使用 / Prohibited Uses
+中文：
+不得用于非法活动、侵犯隐私或恶意行为。
+
+日本語：
+違法な活動、プライバシーの侵害、または悪意のある行為には使用できません。
+
+English:
+The software may not be used for illegal activities, privacy violations, or malicious purposes.
+
+6. 免责声明 / 免責事項 / Disclaimer
+中文：
+本软件按“原样”提供，不提供任何明示或暗示的担保。版权所有者不对因使用本软件而产生的任何损失或损害承担责任。
+
+日本語：
+このソフトウェアは "現状のまま" 提供され、いかなる明示または黙示の保証も行いません。本ソフトウェアの使用によって生じるいかなる損害についても、著作権者は責任を負いません。
+
+English:
+This software is provided "as is," without any express or implied warranties. In no event shall the copyright holder be liable for any damages arising from the use of this software.
+
+7. 终止条款 / 終了条項 / Termination Clause
+中文：
+违反本许可证的条款将导致许可证自动终止。
+
+日本語：
+このライセンスの条項に違反した場合、ライセンスは自動的に終了します。
+
+English:
+Violation of the terms of this license will result in automatic termination of the license.
