@@ -3,11 +3,11 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f0f5; /* 背景色更柔和 */
 }
 
-/* 背景元素样式，覆盖整个页面 */
+/* 背景元素样式 */
 #bg {
   width: 100%;
   height: 100%;
@@ -16,7 +16,7 @@ html, body {
   left: 0;
   background-size: cover;
   background-position: center;
-  transition: background 1s;
+  transition: background 1s ease-in-out;
 }
 
 /* 背景图片淡入效果 */
@@ -37,12 +37,18 @@ html, body {
   bottom: 20px;
   left: 20px;
   font-size: 16px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 15px;
+  color: #444;
+  background: rgba(255, 255, 255, 0.85); /* 半透明白色背景 */
+  padding: 10px 20px;
   border-radius: 10px;
   text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#bg-info:hover {
+  background: rgba(255, 255, 255, 1); /* 背景颜色变为完全白色 */
+  transform: scale(1.08);
 }
 
 /* 展示输入框按钮的样式 */
@@ -51,18 +57,19 @@ html, body {
   top: 20px;
   right: 20px;
   font-size: 16px;
-  padding: 10px 15px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  padding: 12px 20px;
+  color: #fff;
+  background: #3498db; /* 天蓝色背景 */
+  border-radius: 8px;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 #show-input:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background: #2980b9; /* 更深的天蓝色 */
+  transform: scale(1.05);
 }
 
 /* 输入框容器样式 */
@@ -70,30 +77,31 @@ html, body {
   position: absolute;
   top: 70px;
   right: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95); /* 半透明背景 */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
 
 /* 更换背景按钮的样式 */
 #change {
   margin-top: 10px;
-  padding: 10px 15px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  padding: 12px 20px;
+  color: #fff;
+  background: #2ecc71; /* 绿色背景 */
+  border-radius: 8px;
   text-decoration: none;
   cursor: pointer;
   display: block;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 #change:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background: #27ae60; /* 更深的绿色 */
+  transform: scale(1.05);
 }
 
 /* 下载按钮样式 */
@@ -101,13 +109,19 @@ html, body {
   position: absolute;
   bottom: 70px;
   left: 20px;
-  padding: 10px 15px;
+  padding: 12px 20px;
   font-size: 16px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  color: #fff;
+  background: #1abc9c; /* 蓝绿色背景 */
+  border-radius: 8px;
   text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#download-btn:hover {
+  background: #16a085; /* 更深的蓝绿色 */
+  transform: scale(1.05);
 }
 
 /* 暂停按钮样式 */
@@ -115,21 +129,22 @@ html, body {
   position: absolute;
   bottom: 130px;
   left: 20px;
-  padding: 10px 15px;
+  padding: 12px 20px;
   font-size: 16px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  color: #fff;
+  background: #f39c12; /* 黄色背景 */
+  border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border: none;
   outline: none;
-  text-decoration: none; /* 去除下划线 */
-  transition: background-color 0.3s ease;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 #toggle-update:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background: #e67e22; /* 更深的橙色 */
+  transform: scale(1.05);
 }
 
 /* 个人主页链接样式 */
@@ -138,14 +153,83 @@ html, body {
   bottom: 10px;
   right: 20px;
   font-size: 16px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px 10px;
-  border-radius: 5px;
+  color: #333;
+  background: rgba(255, 255, 255, 0.9); /* 半透明背景 */
+  padding: 8px 12px;
+  border-radius: 8px;
   text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 #site-link:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 1); /* 完全白色 */
+  transform: scale(1.05);
+}
+
+/* 侧边栏样式 */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%; /* 默认隐藏 */
+  width: 250px;
+  height: 100%;
+  background: #f1f1f1; /* 浅灰色背景 */
+  color: #333;
+  transition: left 0.3s ease;
+  z-index: 999;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 侧边栏展开状态 */
+#sidebar.expanded {
+  left: 0;
+}
+
+/* 侧边栏按钮样式 */
+.sidebar-item {
+  display: block;
+  padding: 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 8px;
+  background: #e0e0e0; /* 浅灰色背景 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-item:hover {
+  background: #d0d0d0; /* 更深的灰色 */
+  transform: scale(1.05);
+}
+
+/* 左侧边栏开关按钮样式 */
+#sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  background: #007bff; /* 蓝色背景 */
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+#sidebar-toggle:hover {
+  background: #0056b3; /* 更深的蓝色 */
+  transform: scale(1.1);
 }

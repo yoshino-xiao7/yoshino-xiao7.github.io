@@ -4,25 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>小夏春美-图片下载站</title>
-  <!-- 引入外部 CSS 文件 -->
   <link rel="stylesheet" href="css/index.css">
   <link id="favicon" rel="icon" type="image/png" href="img/xiao7.jpg">
 </head>
 <body>
-  <!-- 背景元素，显示背景图片 -->
+  <!-- 背景元素 -->
   <div id="bg"></div>
 
-  <!-- 图片信息显示，点击可跳转到图片来源 -->
+  <!-- 图片信息显示 -->
   <a id="bg-info" href="#" target="_blank">图片信息</a>
 
-  <!-- 用户输入部分，默认隐藏 -->
+  <!-- 用户输入部分 -->
   <div id="input-container" style="display: none;">
     <label for="image-tag">请输入想要的图片类型 (如：萝莉、御姐等)：</label>
     <input type="text" id="image-tag" placeholder="请输入图片类型">
     <a id="change" href="javascript:void(0)">更换背景</a>
   </div>
 
-  <!-- 下载按钮样式 -->
+  <!-- 下载按钮 -->
   <a id="download-btn" href="#" download="图片.jpg" style="display: none;">下载图片</a>
 
   <!-- 切换自动更新按钮 -->
@@ -31,10 +30,19 @@
   <!-- 点击展示输入框按钮 -->
   <a id="show-input" href="javascript:void(0)">选择图片类型</a>
 
-  <!-- 新增超链接 -->
+  <!-- 个人主页链接 -->
   <a id="site-link" href="https://youli.icu" target="_blank">个人主页</a>
 
-  <!-- 引入外部 JS 文件 -->
+  <!-- 侧边栏 -->
+  <div id="sidebar">
+    <a href="javascript:void(0)" class="sidebar-item">音乐</a>
+    <a href="javascript:void(0)" class="sidebar-item">未定</a>
+    <a href="javascript:void(0)" class="sidebar-item">未定</a>
+  </div>
+
+  <!-- 侧边栏开关按钮 -->
+  <a id="sidebar-toggle" href="javascript:void(0)"></a>
+
   <script src="js/index.js"></script>
 </body>
 </html>

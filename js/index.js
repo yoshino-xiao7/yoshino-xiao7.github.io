@@ -117,3 +117,19 @@ window.onload = async function () {
   await changeBG();
   startAutoUpdate(); // 开始自动更换
 };
+
+// 侧边栏功能
+const sidebar = document.getElementById('sidebar');
+const sidebarToggle = document.getElementById('sidebar-toggle');
+
+// 切换侧边栏的显示和隐藏
+sidebarToggle.onclick = function () {
+  sidebar.classList.toggle('expanded');
+};
+
+// 点击页面其他地方关闭侧边栏
+document.addEventListener('click', function (event) {
+  if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+    sidebar.classList.remove('expanded');
+  }
+});
