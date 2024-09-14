@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <!-- 引入外部的 CSS 文件 -->
+    <link rel="stylesheet" href="css/music.css">
+    <!-- APlayer 和 MetingJS 样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+</head>
+<body>
+    <!-- 背景区域 -->
+    <div id="bg"></div>
+
+    <!-- 控制按钮区 -->
+    <div id="control-buttons">
+        <button id="change">更换背景</button>
+        <button id="toggle-update">暂停自动更换</button>
+        <a id="download-btn" style="display: none;" href="#">下载背景图片</a>
+        <a id="bg-info" href="#" target="_blank">背景图片信息</a>
+    </div>
+
+    <!-- 用户输入部分 -->
+    <div id="input-container" style="display:none; text-align: center; margin-top: 20px;">
+        <input type="text" id="image-tag" placeholder="输入图片标签">
+        <button id="show-input">展示输入框</button>
+    </div>
+
+    <!-- 按钮，用于显示/隐藏输入框 -->
+    <div style="text-align: center; margin-top: 20px;">
+        <button id="toggle-input">选择歌单</button>
+    </div>
+
+    <!-- 输入框容器，初始是隐藏的 -->
+    <div id="playlist-input-container">
+        <label for="playlist-id-input">输入歌单 ID：</label>
+        <input type="text" id="playlist-id-input" placeholder="输入歌单 ID">
+        <button id="load-playlist">加载歌单</button>
+    </div>
+
+    <!-- Meting.js 音乐播放器 -->
+    <div id="player-container">
+        <!-- 初始加载的播放器 -->
+    </div>
+
+    <!-- 引入外部的 JS 文件 -->
+    <script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <script src="https://unpkg.com/meting@2.0.1/dist/Meting.min.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/background.js"></script>
+</body>
+</html>
