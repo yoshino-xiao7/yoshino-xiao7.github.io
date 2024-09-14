@@ -33,12 +33,17 @@
 
 /* 控制按钮区样式 */
 #control-buttons {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     text-align: right;
+    z-index: 10; /* 确保按钮在内容之上 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
+/* 通用按钮样式 */
 button {
     padding: 12px 24px;
     font-size: 16px;
@@ -50,9 +55,10 @@ button {
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    margin: 0 10px;
+    margin-bottom: 10px; /* 为按钮之间添加间距 */
 }
 
+/* 按钮悬停和点击效果 */
 button:hover {
     background: #f8f8f8;
     border-color: #bbb;
@@ -67,7 +73,34 @@ button:active {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* 隐藏输入框的初始状态 */
+/* 针对移动端的响应式按钮样式 */
+@media screen and (max-width: 768px) {
+    #control-buttons {
+        right: 10px;
+        top: 10px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+        border-radius: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #control-buttons {
+        right: 5px;
+        top: 5px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 12px;
+        border-radius: 30px;
+    }
+}
+
+/* 输入框容器样式 */
 #playlist-input-container {
     display: none;
     position: absolute;
@@ -81,47 +114,53 @@ button:active {
     z-index: 100;
 }
 
-/* 输入框的样式 */
+/* 输入框样式 */
 #playlist-id-input {
     padding: 8px;
     margin-right: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-sizing: border-box;
     font-size: 16px;
 }
 
-/* 加载按钮的样式 */
+/* 加载按钮样式 */
 #load-playlist {
     padding: 8px 16px;
     cursor: pointer;
 }
 
-/* 背景信息展示样式 */
+/* 背景图片信息展示样式 */
 #bg-info {
-    color: #333; /* 深灰色文字 */
-    font-size: 16px;
-    text-align: center; /* 文字居中 */
+    color: #333;
+    font-size: 14px;
+    text-align: center;
     text-decoration: none;
     display: block;
     margin-top: 10px;
-    padding: 12px 20px;
+    padding: 10px 16px;
     border-radius: 8px;
-    background-color: #f9f9f9; /* 白色背景 */
-    border: 1px solid #ddd; /* 浅灰色边框 */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    max-width: 250px; /* 控制最大宽度 */
-    word-wrap: break-word; /* 处理长文字换行 */
-    margin-left: auto; /* 水平居中 */
-    margin-right: auto; /* 水平居中 */
+    max-width: 180px;
+    word-wrap: break-word;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #bg-info:hover {
-    text-decoration: none; /* 去掉下划线 */
-    background-color: #f0f0f0; /* 悬停时背景颜色略微深 */
+    background-color: #f0f0f0;
     transform: scale(1.05);
 }
 
 #bg-info.loading {
     color: #999;
+}
+
+/* 针对移动端的响应式背景信息 */
+@media screen and (max-width: 480px) {
+    #bg-info {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
 }
