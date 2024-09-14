@@ -58,8 +58,8 @@ html, body {
   right: 20px;
   font-size: 16px;
   padding: 12px 20px;
-  color: #fff;
-  background: #3498db; /* 天蓝色背景 */
+  color: #3498db; /* 天蓝色文字 */
+  background: #fff; /* 白色背景 */
   border-radius: 8px;
   cursor: pointer;
   text-decoration: none;
@@ -68,7 +68,7 @@ html, body {
 }
 
 #show-input:hover {
-  background: #2980b9; /* 更深的天蓝色 */
+  background: #e0e0e0; /* 浅灰色背景 */
   transform: scale(1.05);
 }
 
@@ -88,8 +88,8 @@ html, body {
 #change {
   margin-top: 10px;
   padding: 12px 20px;
-  color: #fff;
-  background: #2ecc71; /* 绿色背景 */
+  color: #2ecc71; /* 绿色文字 */
+  background: #fff; /* 白色背景 */
   border-radius: 8px;
   text-decoration: none;
   cursor: pointer;
@@ -100,7 +100,7 @@ html, body {
 }
 
 #change:hover {
-  background: #27ae60; /* 更深的绿色 */
+  background: #e0e0e0; /* 浅灰色背景 */
   transform: scale(1.05);
 }
 
@@ -111,8 +111,8 @@ html, body {
   left: 20px;
   padding: 12px 20px;
   font-size: 16px;
-  color: #fff;
-  background: #1abc9c; /* 蓝绿色背景 */
+  color: #1abc9c; /* 蓝绿色文字 */
+  background: #fff; /* 白色背景 */
   border-radius: 8px;
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -120,7 +120,7 @@ html, body {
 }
 
 #download-btn:hover {
-  background: #16a085; /* 更深的蓝绿色 */
+  background: #e0e0e0; /* 浅灰色背景 */
   transform: scale(1.05);
 }
 
@@ -131,8 +131,8 @@ html, body {
   left: 20px;
   padding: 12px 20px;
   font-size: 16px;
-  color: #fff;
-  background: #f39c12; /* 黄色背景 */
+  color: #f39c12; /* 黄色文字 */
+  background: #fff; /* 白色背景 */
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -143,7 +143,7 @@ html, body {
 }
 
 #toggle-update:hover {
-  background: #e67e22; /* 更深的橙色 */
+  background: #e0e0e0; /* 浅灰色背景 */
   transform: scale(1.05);
 }
 
@@ -198,13 +198,13 @@ html, body {
   text-decoration: none;
   font-size: 18px;
   border-radius: 8px;
-  background: #e0e0e0; /* 浅灰色背景 */
+  background: #fff; /* 白色背景 */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .sidebar-item:hover {
-  background: #d0d0d0; /* 更深的灰色 */
+  background: #e0e0e0; /* 浅灰色背景 */
   transform: scale(1.05);
 }
 
@@ -214,8 +214,8 @@ html, body {
   top: 20px;
   left: 20px;
   font-size: 24px;
-  background: #007bff; /* 蓝色背景 */
-  color: white;
+  background: #fff; /* 白色背景 */
+  color: #007bff; /* 蓝色文字 */
   padding: 15px;
   border-radius: 50%;
   cursor: pointer;
@@ -230,6 +230,7 @@ html, body {
 }
 
 #sidebar-toggle:hover {
-  background: #0056b3; /* 更深的蓝色 */
+  background: #e0e0e0; /* 浅灰色背景 */
   transform: scale(1.1);
 }
+
