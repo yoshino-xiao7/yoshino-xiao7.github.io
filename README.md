@@ -1,6 +1,9 @@
 # [yuzusoft.life](https://yuzusoft.life)
 小夏春美的图片下载站，网站持续更新中~
 
+![音乐播放器](https://github.com/yoshino-xiao7/yoshino-xiao7.github.io/blob/main/img/wyy.png?raw=true)
+
+
 ## 更新日志
 
 ### [1.1.0] - 2024-09-14
