@@ -14,13 +14,13 @@ function sleep(time) {
 async function fetchBG(tag = '') {
   const params = new URLSearchParams({
     num: 1,
-    proxy: 'fuck-cors.lgc2333.top',
+    proxy: 'fuck-cors.yuzusoft.life',
     tag: tag || '百合',
     excludeAI: 1,
     r18: 2,
   });
 
-  const apiUrl = `https://fuck-cors.lgc2333.top/setu/v2?${params}`;
+  const apiUrl = `https://fuck-cors.yuzusoft.life/setu/v2?${params}`;
   const res = await fetch(apiUrl, {
     headers: { 'upstream-host': 'api.lolicon.app' },
   });
@@ -84,13 +84,10 @@ function stopAutoUpdate() {
 }
 
 // 点击展示用户输入部分
-document.getElementById('show-input').onclick = function () {
+document.getElementById('show-input').onclick = function (event) {
+  event.stopPropagation(); // 阻止事件冒泡，避免点击时关闭弹出框
   const inputContainer = document.getElementById('input-container');
-  if (inputContainer.style.display === 'none') {
-    inputContainer.style.display = 'block';
-  } else {
-    inputContainer.style.display = 'none';
-  }
+  inputContainer.style.display = inputContainer.style.display === 'none' ? 'block' : 'none';
 };
 
 // 点击更换背景按钮
@@ -133,3 +130,15 @@ document.addEventListener('click', function (event) {
     sidebar.classList.remove('expanded');
   }
 });
+
+// 点击页面其他地方关闭弹出框
+document.addEventListener('click', function (event) {
+  const inputContainer = document.getElementById('input-container');
+  const showInputBtn = document.getElementById('show-input');
+
+  // 检查点击是否在弹出框内
+  if (!inputContainer.contains(event.target) && event.target !== showInputBtn) {
+    inputContainer.style.display = 'none'; // 隐藏用户输入部分
+  }
+});
+

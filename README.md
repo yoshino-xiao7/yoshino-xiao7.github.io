@@ -2,9 +2,8 @@
 小夏春美的图片下载站，网站持续更新中~
 
 ## 音乐功能食用方法
-![歌单id获取](https://github.com/yoshino-xiao7/tp/blob/main/img/wyyid.png?raw=true)
-![歌单id填写](https://github.com/yoshino-xiao7/tp/blob/main/img/ydy.png?raw=true)
-
+![歌单id获取](https://github.com/yoshino-xiao7/yoshino-xiao7.github.io/blob/main/img/wyyid.png?raw=true)
+![歌单id填写](https://github.com/yoshino-xiao7/yoshino-xiao7.github.io/blob/main/img/ydy.png?raw=true)
 
 ## 更新日志
 
@@ -39,4 +38,3 @@
 - **页面加载速度**：通过代码精简和资源优化，显著提升了网页的加载速度与整体性能。
 
 - **移动端检测优化**：优化了移动端检测机制，确保页面在移动设备上有更好的响应和表现。
-

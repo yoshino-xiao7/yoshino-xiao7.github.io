@@ -7,13 +7,13 @@ let userTag = '百合'; // 默认标签
 async function fetchBG(tag = '') {
     const params = new URLSearchParams({
         num: 1,
-        proxy: 'fuck-cors.lgc2333.top',
+        proxy: 'fuck-cors.yuzusoft.life',
         tag: tag || '百合',
         excludeAI: 1,
         r18: 2,
     });
 
-    const apiUrl = `https://fuck-cors.lgc2333.top/setu/v2?${params}`;
+    const apiUrl = `https://fuck-cors.yuzusoft.life/setu/v2?${params}`;
     try {
         const res = await fetch(apiUrl, {
             headers: { 'upstream-host': 'api.lolicon.app' },
