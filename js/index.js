@@ -4,6 +4,8 @@ let changing = false;
 let userTag = '';
 let autoUpdate = true;
 let autoUpdateInterval = null;
+let proxyList = ['fuck-ddos.o607th9p-285.workers.dev', 'fuck-cors.lgc2333.top', 'fuck-cors.yuzusoft.life']; // 代理地址列表
+let currentProxyIndex = 0; // 当前代理的索引
 
 // 简单的 sleep 函数
 function sleep(time) {
@@ -14,28 +16,50 @@ function sleep(time) {
 async function fetchBG(tag = '') {
   const params = new URLSearchParams({
     num: 1,
-    proxy: 'fuck-cors.yuzusoft.life',
+    proxy: proxyList[currentProxyIndex],
     tag: tag || '百合',
     excludeAI: 1,
     r18: 2,
   });
 
-  const apiUrl = `https://fuck-cors.yuzusoft.life/setu/v2?${params}`;
-  const res = await fetch(apiUrl, {
-    headers: { 'upstream-host': 'api.lolicon.app' },
-  });
-  let { data } = await res.json();
-  const selectedPic = data[0];
-  const picUrl = selectedPic.urls.original;
+  const apiUrl = `https://${proxyList[currentProxyIndex]}/setu/v2?${params}`;
 
-  const picRes = await fetch(picUrl, {
-    headers: {
-      'upstream-host': 'i.pximg.net',
-      'real-referer': 'https://www.pixiv.net/',
-    },
-  });
+  try {
+    const res = await fetch(apiUrl, {
+      headers: { 'upstream-host': 'api.lolicon.app' },
+    });
 
-  return [selectedPic, await picRes.blob()];
+    if (!res.ok) {
+      throw new Error(`API 请求失败，状态码：${res.status}`);
+    }
+
+    let { data } = await res.json();
+    const selectedPic = data[0];
+    const picUrl = selectedPic.urls.original;
+
+    const picRes = await fetch(picUrl, {
+      headers: {
+        'upstream-host': 'i.pximg.net',
+        'real-referer': 'https://www.pixiv.net/',
+      },
+    });
+
+    if (!picRes.ok) {
+      throw new Error(`图片加载失败，状态码：${picRes.status}`);
+    }
+
+    return [selectedPic, await picRes.blob()];
+  } catch (e) {
+    console.error(`代理 ${proxyList[currentProxyIndex]} 访问失败，错误信息：`, e);
+
+    // 切换到下一个代理地址
+    currentProxyIndex = (currentProxyIndex + 1) % proxyList.length;
+
+    console.log(`切换到备用代理 ${proxyList[currentProxyIndex]}`);
+
+    // 递归调用自身，再次尝试使用新的代理地址
+    return fetchBG(tag);
+  }
 }
 
 // 更换背景图片的逻辑
@@ -43,31 +67,36 @@ async function changeBG() {
   const bgInfoA = document.getElementById('bg-info');
   const changeElem = document.getElementById('change');
   const downloadBtn = document.getElementById('download-btn');
+  const bgElement = document.getElementById('bg');
 
-  if (bgUrl) URL.revokeObjectURL(bgUrl);
+  if (bgUrl) URL.revokeObjectURL(bgUrl); // 释放旧的 URL
 
-  try {
-    const [bgInfo, bg] = await fetchBG(userTag);
-    bgUrl = URL.createObjectURL(bg);
-    const bgElement = document.getElementById('bg');
-    bgElement.style.animation = `bg-fade-out 1s cubic-bezier(0, 0, 0.2, 1)`;
-
-    await new Promise((resolve) => {
-      bgElement.addEventListener('animationend', resolve, { once: true });
-    });
-
-    bgElement.style.backgroundImage = `url("${bgUrl}")`;
-    bgElement.style.animation = `bg-fade-in 1s cubic-bezier(0, 0, 0.2, 1)`;
-
-    bgInfoA.innerText = bgInfo.title;
-    bgInfoA.href = `https://www.pixiv.net/artworks/${bgInfo.pid}`;
-
-    downloadBtn.href = bgUrl;
-    downloadBtn.download = `${bgInfo.title}.jpg`;
-    downloadBtn.style.display = 'inline';
-  } catch (e) {
-    console.error(e);
+  const result = await fetchBG(userTag);
+  if (!result) {
+    console.log('未能成功获取背景图片');
+    return;
   }
+
+  const [bgInfo, bg] = result;
+  bgUrl = URL.createObjectURL(bg);
+
+  // 处理背景图片动画效果
+  bgElement.style.animation = `bg-fade-out 1s cubic-bezier(0, 0, 0.2, 1)`;
+
+  await new Promise((resolve) => {
+    bgElement.addEventListener('animationend', resolve, { once: true });
+  });
+
+  bgElement.style.backgroundImage = `url("${bgUrl}")`;
+  bgElement.style.animation = `bg-fade-in 1s cubic-bezier(0, 0, 0.2, 1)`;
+
+  // 更新图片信息和下载链接
+  bgInfoA.innerText = bgInfo.title;
+  bgInfoA.href = `https://www.pixiv.net/artworks/${bgInfo.pid}`;
+
+  downloadBtn.href = bgUrl;
+  downloadBtn.download = `${bgInfo.title}.jpg`;
+  downloadBtn.style.display = 'inline';
 }
 
 // 自动更换背景图片
@@ -141,4 +170,3 @@ document.addEventListener('click', function (event) {
     inputContainer.style.display = 'none'; // 隐藏用户输入部分
   }
 });
-

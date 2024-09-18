@@ -3,23 +3,27 @@ let autoUpdate = true;
 let autoUpdateInterval = null;
 let userTag = '百合'; // 默认标签
 
+// 代理列表，依次尝试
+const proxyList = ['fuck-ddos.o607th9p-285.workers.dev' , 'fuck-cors.lgc2333.top' , 'fuck-cors.yuzusoft.life']; // 添加备用代理
+let currentProxyIndex = 0; // 当前使用的代理索引
+
 // 获取背景图片函数
 async function fetchBG(tag = '') {
     const params = new URLSearchParams({
         num: 1,
-        proxy: 'fuck-cors.yuzusoft.life',
+        proxy: proxyList[currentProxyIndex],
         tag: tag || '百合',
         excludeAI: 1,
         r18: 2,
     });
 
-    const apiUrl = `https://fuck-cors.yuzusoft.life/setu/v2?${params}`;
+    const apiUrl = `https://${proxyList[currentProxyIndex]}/setu/v2?${params}`;
     try {
         const res = await fetch(apiUrl, {
             headers: { 'upstream-host': 'api.lolicon.app' },
         });
 
-        if (!res.ok) throw new Error('Failed to fetch from API');
+        if (!res.ok) throw new Error(`Failed to fetch from API (proxy: ${proxyList[currentProxyIndex]})`);
         let { data } = await res.json();
         const selectedPic = data[0];
         const picUrl = selectedPic.urls.original;
@@ -34,8 +38,13 @@ async function fetchBG(tag = '') {
         if (!picRes.ok) throw new Error('Failed to fetch image from Pixiv');
         return [selectedPic, await picRes.blob()];
     } catch (error) {
-        console.error('Error fetching background image:', error);
-        return [null, null]; // 返回空结果以避免报错
+        console.error(`Error fetching background image from proxy ${proxyList[currentProxyIndex]}:`, error);
+
+        // 尝试切换到下一个代理
+        currentProxyIndex = (currentProxyIndex + 1) % proxyList.length;
+        console.log(`Switching to proxy: ${proxyList[currentProxyIndex]}`);
+
+        return fetchBG(tag); // 递归调用自身，尝试使用下一个代理
     }
 }
 
@@ -86,7 +95,7 @@ function stopAutoUpdate() {
     }
 }
 
-// 页面加载后启动自动更换背景并加载默认歌单
+// 页面加载后启动自动更换背景并加载默认背景
 window.onload = function () {
     changeBG(); // 加载默认背景
     startAutoUpdate(); // 启动自动更新
