@@ -1,6 +1,10 @@
 # [yuzusoft.life](https://yuzusoft.life)
 小夏春美的图片下载站，网站持续更新中~
 
+# 声明
+
+## 当你无聊到对别人公共的服务器进行恶意攻击，那你不如有时间在拼多多拼个妈
+
 ## 音乐功能食用方法
 ![歌单id获取](https://github.com/yoshino-xiao7/tp/blob/main/img/wyyid.png?raw=true)
 ![歌单id填写](https://github.com/yoshino-xiao7/tp/blob/main/img/ydy.png?raw=true)
