@@ -7,8 +7,8 @@
 
 ### 例如不知名恶意攻击：
                                                                            
-- ![日志](https://github.com/yoshino-xiao7/tp/blob/main/img/ddos-cf2.png?raw=true)
-- ![事件](https://github.com/yoshino-xiao7/tp/blob/main/img/ddos-cf3.png?raw=true)
+![日志](https://github.com/yoshino-xiao7/tp/blob/main/img/ddos-cf2.png?raw=true)
+![事件](https://github.com/yoshino-xiao7/tp/blob/main/img/ddos-cf3.png?raw=true)
 
 ## 音乐功能食用方法
 ![歌单id获取](https://github.com/yoshino-xiao7/tp/blob/main/img/wyyid.png?raw=true)
