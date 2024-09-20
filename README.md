@@ -5,6 +5,11 @@
 
 ## 当你无聊到对别人公共的服务器进行恶意攻击，那你不如有时间在拼多多拼个妈
 
+### 例如
+                                                                           
+- ![日志]([https://github.com/yoshino-xiao7/tp/blob/main/img/wyyid.png?raw=true](https://github.com/yoshino-xiao7/tp/blob/main/img/ddos-cf2.png?raw=true))
+- ![日志]([https://github.com/yoshino-xiao7/tp/blob/main/img/wyyid.png?raw=true](https://github.com/yoshino-xiao7/tp/blob/main/img/ddos-cf3.png?raw=true))
+
 ## 音乐功能食用方法
 ![歌单id获取](https://github.com/yoshino-xiao7/tp/blob/main/img/wyyid.png?raw=true)
 ![歌单id填写](https://github.com/yoshino-xiao7/tp/blob/main/img/ydy.png?raw=true)
