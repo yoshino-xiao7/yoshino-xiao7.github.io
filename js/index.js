@@ -101,7 +101,7 @@ async function changeBG() {
 
 // 自动更换背景图片
 function startAutoUpdate() {
-  autoUpdateInterval = setInterval(changeBG, 10000); // 每10秒更换一次
+  autoUpdateInterval = setInterval(changeBG, 30000); // 每30秒更换一次
 }
 
 // 停止自动更新
