@@ -83,7 +83,7 @@ async function changeBG() {
 // 启动自动更新
 function startAutoUpdate() {
     console.log('Auto update started');
-    autoUpdateInterval = setInterval(changeBG, 10000); // 每10秒更新一次
+    autoUpdateInterval = setInterval(changeBG, 30000); // 每30秒更新一次
 }
 
 // 停止自动更新
