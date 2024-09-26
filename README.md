@@ -7,6 +7,8 @@
 
 ### 某些人呢也不要太急了，我以为大明星呢，还要开盒，眼聋了就蹲下来仔细看看，再不济去互关里看看呢？你再厉害，还至于跟我在这一亩三分地呢？本身都是同学，还开盒呢？
 
+### [小丑文献](https://github.com/L1bws/Fuck-Thief)
+
 ![事件](https://github.com/yoshino-xiao7/tp/blob/main/img/bilbil-01.jpg?raw=true)
 ![事件](https://github.com/yoshino-xiao7/tp/blob/main/img/github-01.jpg?raw=true)
 ![事件](https://github.com/yoshino-xiao7/tp/blob/main/img/github-02.jpg?raw=true)
