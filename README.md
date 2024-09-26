@@ -5,7 +5,7 @@
 
 ## 当你无聊到对别人公共的服务器进行恶意攻击，那你不如有时间在拼多多拼个妈（foster mother）
 
-### 某些人呢也不要太急了，我以为大明星呢，还要开盒，眼聋了就蹲下来仔细看看，再不济去互关里看看呢？
+### 某些人呢也不要太急了，我以为大明星呢，还要开盒，眼聋了就蹲下来仔细看看，再不济去互关里看看呢？你再厉害，还至于跟我在这一亩三分地呢？本身都是同学，还开盒呢？
 
 ![事件](https://github.com/yoshino-xiao7/tp/blob/main/img/bilbil-01.jpg?raw=true)
 ![事件](https://github.com/yoshino-xiao7/tp/blob/main/img/github-01.jpg?raw=true)
