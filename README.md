@@ -5,7 +5,7 @@
 
 ## 当你无聊到对别人公共的服务器进行恶意攻击，那你不如有时间在拼多多拼个妈
 
-### 某不知名恶意攻击对github免费服务器做出的贡献：
+### 感谢某不知名恶意攻击对github免费服务器做出的贡献：
                                                                            
 ![事件](https://github.com/yoshino-xiao7/tp/blob/main/img/ddos-pmz.png?raw=true)
 
